@@ -13,12 +13,12 @@
 
 ### Installation
 ```bash
-npm install react-native-side-menu --save
+npm install react-native-side-menu-updated --save
 ```
 
 ### Usage example
 ```javascript
-import SideMenu from 'react-native-side-menu'
+import SideMenu from 'react-native-side-menu-updated'
 
 class ContentView extends React.Component {
   render() {
