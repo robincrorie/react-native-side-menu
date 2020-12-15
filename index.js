@@ -29,7 +29,9 @@ type Props = {
   onStartShouldSetResponderCapture: Function,
   isOpen: bool,
   bounceBackOnOverdraw: bool,
-  autoClosing: bool
+  autoClosing: bool,
+  allowOverlayPressPropagation: bool,
+  overlayColor: string,
 };
 
 type Event = {
@@ -120,6 +122,15 @@ export default class SideMenu extends React.Component {
     }
   }
 
+  getOverlayColor() {
+    if(this.props.allowOverlayPressPropagation) return this.props.overlayColor || "transparent"
+    // stopPropagation doesn't work with transparent background
+    if(!this.props.overlayColor || this.props.overlayColor == "transparent") {
+      return '#00000001'
+    }
+    return this.props.overlayColor
+  }
+
   onLayoutChange(e: Event) {
     const { width, height } = e.nativeEvent.layout;
     const openMenuOffset = width * this.state.openOffsetMenuPercentage;
@@ -136,8 +147,15 @@ export default class SideMenu extends React.Component {
 
     if (this.isOpen) {
       overlay = (
-        <TouchableWithoutFeedback onPress={() => this.openMenu(false)}>
-          <View style={styles.overlay} />
+        <TouchableWithoutFeedback
+          onPress={(e) => {
+            if(!this.props.allowOverlayPressPropagation) {
+              e.stopPropagation()
+            }
+            this.openMenu(false)
+          }}
+        >
+          <View style={[styles.overlay, { backgroundColor: this.getOverlayColor() }]} />
         </TouchableWithoutFeedback>
       );
     }

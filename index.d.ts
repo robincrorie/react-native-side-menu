@@ -79,6 +79,15 @@ export interface ReactNativeSideMenuProps {
      * @default true
      */
     autoClosing?: boolean;
+    /**
+     * When true, press events on the overlay can be propagated to the buttons inside your page
+     * @default false
+     */
+    allowOverlayPressPropagation?: boolean;
+    /**
+     * @default transparent
+     */
+    overlayColor?: string
 }
 
 export default class SideMenu extends Component<ReactNativeSideMenuProps> {

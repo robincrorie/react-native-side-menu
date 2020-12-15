@@ -28,6 +28,5 @@ export default StyleSheet.create({
   },
   overlay: {
     ...absoluteStretch,
-    backgroundColor: 'transparent',
   },
 });
