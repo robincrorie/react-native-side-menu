@@ -85,6 +85,7 @@ export interface ReactNativeSideMenuProps {
      */
     allowOverlayPressPropagation?: boolean;
     /**
+     * Page overlay color when sidebar open
      * @default transparent
      */
     overlayColor?: string
