@@ -97,4 +97,4 @@ Ensure that your main view has a background color applied
 </SideMenu>
 ```
 ### Questions?
-Feel free to contact me in [twitter](https://twitter.com/kureevalexey) or [create an issue](https://github.com/Kureev/react-native-side-menu/issues/new)
+Feel free to [create an issue](https://github.com/alessiocancian/react-native-side-menu-updated/issues/new)
