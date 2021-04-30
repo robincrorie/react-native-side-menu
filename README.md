@@ -1,3 +1,5 @@
+![npm](https://img.shields.io/npm/v/react-native-side-menu-updated)
+
 ## Customizable side menu for react-native
 
 | iOS | android |
