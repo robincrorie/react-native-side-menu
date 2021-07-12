@@ -33,6 +33,7 @@ type Props = {
   allowOverlayPressPropagation: bool,
   overlayColor: string,
   overlayOpacity: number,
+  animateOverlayOpacity: bool
 };
 
 type Event = {
@@ -154,15 +155,15 @@ export default class SideMenu extends React.PureComponent {
         }}
       >
         <Animated.View
-          pointerEvents="none"
+          pointerEvents={this.isOpen ? 'auto' : 'none'}
           style={[styles.overlay, {
             backgroundColor: this.getOverlayColor(),
-            opacity: this.state.left.interpolate({
+            opacity: this.props.animateOverlayOpacity ? this.state.left.interpolate({
               inputRange: [
                 this.state.hiddenMenuOffset,
                 this.state.openMenuOffset],
               outputRange: [0, this.props.overlayOpacity],
-            }),
+            }) : this.props.overlayOpacity,
           }]}
         />
       </TouchableWithoutFeedback>
@@ -332,4 +333,5 @@ SideMenu.defaultProps = {
   bounceBackOnOverdraw: true,
   autoClosing: true,
   overlayOpacity: 1,
+  animateOverlayOpacity: true,
 };
