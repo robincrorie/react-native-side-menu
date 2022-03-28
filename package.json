@@ -1,5 +1,5 @@
 {
-  "name": "react-native-side-menu-updated",
+  "name": "@chakrahq/react-native-side-menu",
   "version": "1.3.2",
   "description": "Simple customizable component to create side menu",
   "main": "build/index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:alessiocancian/react-native-side-menu.git"
+    "url": "git@github.com:chakrahq/react-native-side-menu.git"
   },
   "keywords": [
     "react-native",
@@ -17,12 +17,12 @@
     "ios",
     "sidebar"
   ],
-  "author": "Alexey Kureev <kureev-mail@ya.ru> (https://github.com/Kureev)",
+  "author": "ChakraHQ <engineering@chakrahq.com> (https://github.com/chakrahq)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alessiocancian/react-native-side-menu/issues"
+    "url": "https://github.com/chakrahq/react-native-side-menu/issues"
   },
-  "homepage": "https://github.com/alessiocancian/react-native-side-menu",
+  "homepage": "https://github.com/chakrahq/react-native-side-menu",
   "dependencies": {
     "prop-types": "^15.5.10"
   },

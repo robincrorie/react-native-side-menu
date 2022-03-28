@@ -1,4 +1,4 @@
-![npm](https://img.shields.io/npm/v/react-native-side-menu-updated)
+![npm](https://img.shields.io/npm/v/@chakrahq/react-native-side-menu)
 
 ## Customizable side menu for react-native
 
@@ -12,15 +12,16 @@
 - [Usage example](#usage-example)
 - [Component props](#component-props)
 - [Questions?](#questions)
+- [Credits](#credits)
 
 ### Installation
 ```bash
-npm install react-native-side-menu-updated --save
+npm install @chakrahq/react-native-side-menu --save
 ```
 
 ### Usage example
 ```javascript
-import SideMenu from 'react-native-side-menu-updated'
+import SideMenu from 'react-native-side-menu'
 
 class ContentView extends React.Component {
   render() {
@@ -78,6 +79,8 @@ class Application extends React.Component {
 | autoClosing | true | boolean | When true, menu close automatically as soon as an event occurs |
 | allowOverlayPressPropagation | false | boolean | When true, press events on the overlay can be propagated to the buttons inside your page |
 | overlayColor | transparent | string | Page overlay color when sidebar open |
+| overlayOpacity | 1 | Number | Page overlay opacity when sidebar open |
+| animateOverlayOpacity | true | boolean | When true, the page overlay opacity is animated from 0 to overlayOpacity |
 
 ### FAQ
 
@@ -99,4 +102,10 @@ Ensure that your main view has a background color applied
 </SideMenu>
 ```
 ### Questions?
-Feel free to [create an issue](https://github.com/alessiocancian/react-native-side-menu/issues/new)
+Feel free to [create an issue](https://github.com/chakrahq/react-native-side-menu/issues/new)
+
+### Credits
+This repository is a fork of a fork. Original sources were not maintained for long, so we created this fork and maintain it. We would like to give our thanks and credit for the efforts of the original authors and contributors of these original sources:
+- [Kureev/react-native-side-menu](https://github.com/Kureev/react-native-side-menu)
+- [alessiocancian/react-native-side-menu](https://github.com/alessiocancian/react-native-side-menu)
+
